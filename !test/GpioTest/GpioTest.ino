@@ -37,7 +37,7 @@ void set_led_status(int status) // status : 0->Off, not zero->On
 //=====================================
 void init_button()
 {
-    pinMode(PIN_BUTTON, OUTPUT);
+    pinMode(PIN_BUTTON, INPUT);
 }
 
 //=====================================
@@ -76,6 +76,9 @@ void loop()
     if(button_status) { // If button is pushed, turn on LED.
         set_led_status(1);
     }
+    else {
+        set_led_status(0);
+    }
+  
         
 }
-
